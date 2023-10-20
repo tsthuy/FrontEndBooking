@@ -90,6 +90,17 @@
                 align-items: center;
                 color: white;
             }
+            .show
+            {
+                position: relative;
+            }
+            .show i
+            {
+                position: absolute;
+                right: 12px;
+                top: 62%;
+                cursor: pointer;
+            }
 
         }
 
