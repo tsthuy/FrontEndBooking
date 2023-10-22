@@ -1,111 +1,91 @@
-.login-background {
-    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+.login-background{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    
 
-    .login-container {
-        background-color: #FFF;
-        width: 500px;
+
+    .login-container{
+        max-width: 500px;
+        min-width: 300px;
         height: 500px;
-        border-radius: 30px;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 20px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+  
 
 
-        .login-content {
+        .login-content{
+            padding: 20px;
 
-            margin: 40px 16px 0 16px;
-
-            .form-control {
-                // max-width: 100%;
-                padding: 10px 8px;
-            }
-
-            .submit {
-                padding: 20px 30px;
-                margin-top: 50px;
-                background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-
-                border-radius: 20px;
-                width: 200px;
-                margin: 0 auto;
-                font-weight: 800;
-                text-transform: uppercase;
-            }
-
-            .login-name {
-                // margin-bottom: 50px;
-                text-align: center;
-                text-transform: uppercase;
-
-            }
-
-            .user,
-            .pass {
-                margin: 10px 0;
-            }
-
-            .pass {
-                margin-bottom: 50px
-            }
-
-            label {
+            .login-title{
+                font-size: 30px;
                 font-weight: 600;
             }
 
-            .forget {
-                display: block;
-                margin-top: 10px;
-                text-decoration: none;
+            .login-input{
+                margin: 12px 0px;
+                border: none;
+                border-radius: none;
+                outline: 0;
+                border-bottom: 1px solid #999;
+                
+            }
+            .login-with{
+
+                font-weight: 600;
             }
 
-            .social-icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .social-login{
+                text-align: center;
+
+                .social-icon{
+                    font-size: 36px;
+                    margin: 20px 20px;
+  
+                }
+                .fb {
+                    color: #4c6ef5;
+                }
+
+                .gg {
+                    color: #f73827;
+                }
             }
 
-            .google {
-                margin-right: 10px;
-                font-size: 30px;
-                width: 40px;
-                height: 40px;
-                background-color: rgb(239, 7, 7);
-                display: flex;
-                border-radius: 50%;
-                justify-content: center;
-                align-items: center;
-                color: white;
-            }
-
-            .facebook {
-                margin-left: 10px;
-                font-size: 30px;
-                width: 40px;
-                height: 40px;
-                background-color: #307aaf;
-                display: flex;
-                border-radius: 50%;
-                justify-content: center;
-                align-items: center;
-                color: white;
-            }
-            .show
-            {
+            .login-password{
                 position: relative;
+                .show-password {
+                    position: absolute;
+                    right   : 10px;
+                    top     : 10px;
+                    color: #777;
+                    cursor: pointer;
+                }
             }
-            .show i
-            {
-                position: absolute;
-                right: 12px;
-                top: 62%;
-                cursor: pointer;
             }
 
-        }
-
+        
+    }
+    .btn-login{
+        width: 100%;
+        margin: 12px 0px;
+        border: none;
+        color: #fff;
+        padding: 8px 0px;
+        border-radius: 25px;
+        cursor: pointer;
+        background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
     }
-
-
+    .forgot-password{
+        float: right;
+        font-size: 12px;
+    }
 }
