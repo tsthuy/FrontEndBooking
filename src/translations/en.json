@@ -1,4 +1,40 @@
 {
+    "homeheader": {
+        "medical-specialty": "Specialist",
+        "facility": "Health facilities",
+        "doctor": "Doctor",
+        "Package": "Examination package",
+        "find-doctor": "Find doctors by specialty",
+        "select-hospital": "Choose a hospital or clinic",
+        "select-package": "Choose a good doctor",
+        "general-check": "General health check",
+        "schedule": "Schedule",
+        "help": "Help"
+    },
+    "package": {
+        "title11": "Examination",
+        "title12": "Examination",
+        "title13": "Examination",
+        "title14": "Tests",
+        "title15": "Health",
+        "title16": "Examination",
+        "title17": "Package",
+        "title18": "Live Healthy",
+        "title19": "Test",
+        "title1": "Specialized",
+        "title2": "Remote",
+        "title3": "General",
+        "title4": "Medical",
+        "title5": "Mental",
+        "title6": "Dental",
+        "title7": "Surgical",
+        "title8": "Diabetes",
+        "title9": "Health"
+    },
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

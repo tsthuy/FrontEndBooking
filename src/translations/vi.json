@@ -1,4 +1,40 @@
 {
+    "homeheader": {
+        "medical-specialty": "Chuyên khoa khám bệnh",
+        "facility": "Cơ sở y tế",
+        "doctor": "Bác sĩ",
+        "Package": "Gói khám",
+        "find-doctor": "Tìm bác sĩ theo chuyên khoa",
+        "select-hospital": "Chọn bệnh viện phòng khám",
+        "select-package": "Chọn gói bác sĩ",
+        "general-check": "Khám sức khỏe tổng quát",
+        "schedule": "Lịch",
+        "help": "Hỗ trợ"
+    },
+    "banner": {
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN"
+    },
+    "package": {
+        "title1": "Khám",
+        "title2": "Khám",
+        "title3": "Khám",
+        "title4": "Xét Nghiệm",
+        "title5": "Sức Khỏe",
+        "title6": "Khám",
+        "title7": "Gói",
+        "title8": "Sống Khỏe",
+        "title9": "Bài Test",
+        "title11": "Chuyên Khoa",
+        "title12": "Từ Xa",
+        "title13": "Tổng Quát",
+        "title14": "Y Học",
+        "title15": "Tinh Thần",
+        "title16": "Nha Khoa",
+        "title17": "Phẫu Thuật",
+        "title18": "Tiểu Đường",
+        "title19": "Sức Khỏe"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

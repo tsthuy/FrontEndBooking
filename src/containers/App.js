@@ -19,7 +19,9 @@ import System from '../routes/System';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
-
+import HomePage from './HomePage/HomePage.js'
+import HomeHeader from './HomePage/HomeHeader';
+import CustomScrollbars from '../components/CustomScrollbars';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -48,13 +50,16 @@ class App extends Component {
                         <ConfirmModal />
                         {this.props.isLoggedIn && <Header />}
 
-                        <span className="content-container">
-                            <Switch>
-                                <Route path={path.HOME} exact component={(Home)} />
-                                <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                            </Switch>
-                        </span>
+                        <div className="content-container">
+                            <CustomScrollbars style={{ height: '100vh', weight: '100vw' }}>
+                                <Switch>
+                                    <Route path={path.HOME} exact component={(Home)} />
+                                    <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
+                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                    <Route path={path.HOMEPAGE} component={HomePage} />
+                                </Switch>
+                            </CustomScrollbars>
+                        </div>
 
                         <ToastContainer
                             className="toast-container" toastClassName="toast-item" bodyClassName="toast-item-body"

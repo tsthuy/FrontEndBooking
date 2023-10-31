@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
-import { getAllUsers, createNewUserService } from '../../services/userService'
+import { getAllUsers, createNewUserService, deleteUser, editUserService } from '../../services/userService'
 import ModalUser from './ModalUser';
+import { emitter } from '../../utils/emitter';
+import ModalEditUser from './ModalEditUser';
+import { assign } from 'lodash';
 class UserManage extends Component {
 
     constructor(props) {
         super(props);
         this.state = { // save value and use state in render => render in render()
             arrUsers: [],
-            isOpenModal: false
+            isOpenModal: false,
+            isOpenEditUser: false
         }
     }
 
@@ -36,6 +40,11 @@ class UserManage extends Component {
             isOpenModal: !this.state.isOpenModal
         })
     }
+    handleToggleEditUser = () => {
+        this.setState({
+            isOpenEditUser: !this.state.isOpenEditUser
+        })
+    }
     createNewUser = async (data) => {
         try {
             let response = await createNewUserService(data);
@@ -47,10 +56,49 @@ class UserManage extends Component {
                 this.setState({
                     isOpenModal: false
                 })
+                emitter.emit('EVENT_CLEAR_MODAL_DATA', { 'id': 'your id' })
             }
 
         } catch (error) {
 
+        }
+    }
+    handleDeleteUser = async (item) => {
+        try {
+            let response = await deleteUser(item.id);
+            if (response && response.errCode === 0) {
+                await this.getAllUsersFromReact();
+            } else {
+                alert(response.errMessage)
+            }
+        } catch (e) {
+            console.log(e);
+        }
+
+    }
+    handleEditUser = (user) => {
+        this.setState({
+            isOpenEditUser: true,
+            dataUser: user,
+        })
+    }
+
+    doEditUser = async (data) => {
+        try {
+            let response = await editUserService(data);
+            if (response && response.errCode === 0) {
+                this.setState({
+                    isOpenEditUser: false
+                })
+                await this.getAllUsersFromReact();
+
+            }
+            else {
+                alert(response.errMessage)
+            }
+
+        } catch (e) {
+            console.log(e)
         }
     }
     //tao ra web 
@@ -63,6 +111,13 @@ class UserManage extends Component {
                     toggleFromParent={this.handleToggleUser}
                     createNewUser={this.createNewUser}
                 />
+                {this.state.isOpenEditUser &&
+                    <ModalEditUser
+                        isOpen={this.state.isOpenEditUser}
+                        toggleFromEditUserParent={this.handleToggleEditUser}
+                        currentUser={this.state.dataUser}
+                        editUser={this.doEditUser}
+                    />}
                 <div className='title text-center'>Manage users With ReactJS</div>
                 <div className='mx-1'>
                     <button className='btn btn-primary px-3'
@@ -90,8 +145,8 @@ class UserManage extends Component {
                                             <td> {item.lastName} </td>
                                             <td> {item.address} </td>
                                             <td>
-                                                <button className='btn-edit'><i className="fas fa-edit"></i></button>
-                                                <button className='btn-delete'><i className="fas fa-trash-alt"></i></button>
+                                                <button onClick={() => { this.handleEditUser(item) }} className='btn-edit'><i className="fas fa-edit"></i></button>
+                                                <button onClick={() => { this.handleDeleteUser(item) }} className='btn-delete'><i className="fas fa-trash-alt"></i></button>
                                             </td>
                                         </tr>
                                     )
