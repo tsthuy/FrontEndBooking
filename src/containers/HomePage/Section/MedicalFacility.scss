@@ -1,6 +1,8 @@
-.specialty-cover{
+.cover-facility{ 
+    background-color: white !important;
+
+.section-specialty{
      height: 330px;
-    background: url(../../../assets/images/doctor/140311-background5.webp);
     .specialty-container{
             margin: 0 180px;
         .specialty-header
@@ -16,21 +18,18 @@
                     padding: 6px 8px;
                     border-radius: 5px;
             }
-         
+    
         }
         .specialty-body{
-            gap: 20px !important;
                 .specialty-customize{
-                    display: block;
-                    
-                    .bg-image{
-                        width: 230px;
+                    background-color: #eceeee;
+                    .bg-image-facility{
+                        width: 240px;
                         height: 150px;
-                        background: url(../../../assets/images/SPECIALTY/112457-co-xuong-khop.jpg);
+                        background: url(../../../assets/images/facility/facility1.jpg);
                         background-position: center center;
                         background-repeat: no-repeat;
-                        background-size: cover;
-                        background-color: aliceblue;
+                        background-size: contain;
 
                     }
                     .bg-title{
@@ -68,4 +67,7 @@
    
   
 }
-// reset css of
+
+  }
+
+// reset css of liabary
