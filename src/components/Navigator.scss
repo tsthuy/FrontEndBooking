@@ -35,6 +35,14 @@
                 height: 35px;
                 line-height: 35px;
                 text-transform: none;
+                 &.active {
+                    border: 1px solid red;
+                    a {
+                        color:  orange !important;
+
+                    }
+                    background-color: white;
+                 }
                 .menu-link {
                     text-decoration: none;
                     color: $text-in-light;

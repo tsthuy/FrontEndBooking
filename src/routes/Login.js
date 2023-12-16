@@ -101,6 +101,7 @@ class Login extends Component {
         const { lang } = this.props;
 
         return (
+
             <div className="login-wrapper">
                 <div className="login-container">
                     <div className="form_login">
@@ -147,6 +148,7 @@ class Login extends Component {
                                 className="btn"
                                 value={LanguageUtils.getMessageByKey("login.login", lang)}
                                 onClick={this.processLogin}
+
                             />
                         </div>
                     </div>

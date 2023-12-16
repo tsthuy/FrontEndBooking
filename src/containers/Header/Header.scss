@@ -8,7 +8,30 @@
     color: $common-text-color;
     height: 40px;
     position: relative;
-    .btn-logout {
+    .languages{
+        .welcome{
+            margin-right: 15px;
+        }
+            .language-vi{
+                opacity: .8;
+                padding: 2px;
+                cursor: pointer;
+                &.active{
+                    opacity: 1;
+                    color: yellow;
+                }
+            }
+            .language-en{
+                opacity: .8;
+                margin: 0 5px;
+                padding: 2px;
+                cursor: pointer;
+                &.active{
+                    opacity: 1;
+                    color: rgb(8, 199, 225);
+                }
+            }
+        .btn-logout {
         color: $common-text-color;
         line-height: 40px;
         height: 40px;
@@ -20,4 +43,6 @@
             font-size: $base-size + 1px;
         }
     }
+    }
+    
 }
